@@ -5,12 +5,12 @@ dotenv.config();
 
 export const databaseConfig: IDatabaseConfig = {
     development: {
-        username: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        database: process.env.DB_NAME_DEVELOPMENT,
-        host: process.env.DB_HOST,
-        port: process.env.DB_PORT,
-        dialect: process.env.DB_DIALECT,
+        username: 'database_user_name',
+        password: 'database_password',
+        database: 'development_database_name',
+        host: 'localhost',
+        port: 5432,
+        dialect: 'postgres',
     },
     test: {
         username: process.env.DB_USER,

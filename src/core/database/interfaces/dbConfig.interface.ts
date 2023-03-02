@@ -1,4 +1,3 @@
-// This is for the database configuration interface
 export interface IDatabaseConfigAttributes {
     username?: string;
     password?: string;

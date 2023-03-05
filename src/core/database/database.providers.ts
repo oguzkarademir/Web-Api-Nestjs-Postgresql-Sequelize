@@ -20,18 +20,9 @@ export const databaseProviders = [{
            break;
         default:
            config = databaseConfig.development;
-           console.log('sdsdf')
         }
-        console.log(config)
 
-        const sequelize = new Sequelize({
-         username: 'admin',
-         password: 'admin',
-         database: 'nestjs',
-         host: 'localhost',
-         port: 5432,
-         dialect: 'postgres',
-        });
+        const sequelize = new Sequelize(config);
         sequelize.addModels([User, Post]);
         await sequelize.sync();
         return sequelize;

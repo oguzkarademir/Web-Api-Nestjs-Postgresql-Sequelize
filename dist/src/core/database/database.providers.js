@@ -22,17 +22,8 @@ exports.databaseProviders = [{
                     break;
                 default:
                     config = database_config_1.databaseConfig.development;
-                    console.log('sdsdf');
             }
-            console.log(config);
-            const sequelize = new sequelize_typescript_1.Sequelize({
-                username: 'admin',
-                password: 'admin',
-                database: 'nestjs',
-                host: 'localhost',
-                port: 5432,
-                dialect: 'postgres',
-            });
+            const sequelize = new sequelize_typescript_1.Sequelize(config);
             sequelize.addModels([user_entity_1.User, post_entity_1.Post]);
             await sequelize.sync();
             return sequelize;

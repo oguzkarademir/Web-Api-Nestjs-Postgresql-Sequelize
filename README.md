@@ -34,6 +34,9 @@ $ npm install
 
 ## Running the app
 
+**_You need to clone this project on your local and start. 
+You also need a postgresql database, I built a postgresql docker container and you can find the docker-compose file here._**
+
 ```bash
 # development
 $ npm run start
